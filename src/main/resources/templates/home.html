@@ -3,130 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Canvas Home</title>
+  <title>Home</title>
   <style>
-    /* Reset margins and padding for full-screen effect */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Fullscreen body styling */
-    body, html {
-      width: 100%;
-      height: 100%;
-      overflow: hidden; /* Prevent scrolling */
-      font-family: Arial, sans-serif;
-    }
-
-    /* Header styling */
-    header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      z-index: 10;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
-
-    header h1 {
-      font-size: 24px;
-      color: #333;
-    }
-
-    header nav a {
-      text-decoration: none;
-      color: #555;
-      margin-right: 15px;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
-
-    header nav a:hover {
-      color: #000;
-    }
-
-    /* Canvas styling */
-    canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    .ul{
+      font-size: x-large;
     }
   </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <h1>Canvas Home</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Canvas -->
-  <canvas id="canvas"></canvas>
-
-  <!-- JavaScript for drawing shapes -->
-  <script>
-    // Wait for the DOM to load
-    document.addEventListener("DOMContentLoaded", () => {
-      const canvas = document.getElementById("canvas");
-      const ctx = canvas.getContext("2d");
-
-      // Set canvas size to match the screen
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-
-      // Draw shapes
-      function drawShapes() {
-        // Clear canvas
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        // Draw a rectangle
-        ctx.fillStyle = "#4CAF50"; // Green
-        ctx.fillRect(50, 50, 200, 100);
-
-        // Draw a circle
-        ctx.beginPath();
-        ctx.arc(400, 150, 75, 0, Math.PI * 2, false);
-        ctx.fillStyle = "#2196F3"; // Blue
-        ctx.fill();
-
-        // Draw a line
-        ctx.beginPath();
-        ctx.moveTo(50, 300);
-        ctx.lineTo(300, 400);
-        ctx.strokeStyle = "#FF5722"; // Orange
-        ctx.lineWidth = 5;
-        ctx.stroke();
-
-        // Draw text
-        ctx.font = "30px Arial";
-        ctx.fillStyle = "#000";
-        ctx.fillText("Welcome to Canvas Home!", 50, 500);
-      }
-
-      // Draw initial shapes
-      drawShapes();
-
-      // Redraw shapes when the window is resized
-      window.addEventListener("resize", () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        drawShapes(); // Redraw shapes after resizing
-      });
-    });
-  </script>
+  <ul class="ul">
+    <li>this</li>
+    <li>that</li>
+    <li>uff</li>
+  </ul>
 </body>
 </html>
